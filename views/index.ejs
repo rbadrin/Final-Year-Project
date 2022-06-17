@@ -1,0 +1,24 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+</head>
+
+<body>
+	<video width="100%" height="100%" autoplay muted id="myVideo" controls>
+ 	    <source src="Video.mp4" type="video/mp4">
+    </video>
+</body>
+<script>
+    var speed_data = '<%- JSON.stringify(speed) %>';
+    var time_data = '<%- JSON.stringify(time) %>';
+    var vid = document.getElementById("myVideo");
+
+    vid.playbackRate = speed_data;
+    vid.addEventListener('loadedmetadata', function() {
+  this.currentTime = time_data;
+}, false);
+</script>
+</html>
