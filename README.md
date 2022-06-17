@@ -1,2 +1,1 @@
-# fyp
 # Final-Year-Project
